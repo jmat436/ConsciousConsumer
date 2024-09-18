@@ -6,7 +6,6 @@ DerivedData/
 *.xcuserdata/
 *.xcscheme
 *.xctest
-*.xcassets
 *.DS_Store
 
 # CocoaPods
