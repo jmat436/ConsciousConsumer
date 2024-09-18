@@ -7,18 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7D41A9562C99B33C00D19501 /* ConciousConsumerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D41A9552C99B33C00D19501 /* ConciousConsumerApp.swift */; };
-		7D41A9582C99B33C00D19501 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D41A9572C99B33C00D19501 /* ContentView.swift */; };
+		7D41A9562C99B33C00D19501 /* ConsciousConsumerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D41A9552C99B33C00D19501 /* ConsciousConsumerApp.swift */; };
+		7D41A9582C99B33C00D19501 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D41A9572C99B33C00D19501 /* AccountView.swift */; };
 		7D41A95A2C99B33D00D19501 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D41A9592C99B33D00D19501 /* Assets.xcassets */; };
 		7D41A95D2C99B33D00D19501 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D41A95C2C99B33D00D19501 /* Preview Assets.xcassets */; };
+		7D41A9642C99B59E00D19501 /* ConsciousConsumerHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D41A9632C99B59E00D19501 /* ConsciousConsumerHeaderView.swift */; };
+		7D41A9662C99BD9900D19501 /* ConsciousConsumerFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D41A9652C99BD9900D19501 /* ConsciousConsumerFooterView.swift */; };
+		7DA6AEBD2C9AE104007958C3 /* CustomSecureField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA6AEBC2C9AE104007958C3 /* CustomSecureField.swift */; };
+		7DA6AEBF2C9AE5B0007958C3 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA6AEBE2C9AE5B0007958C3 /* LoginView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7D41A9522C99B33C00D19501 /* ConciousConsumer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConciousConsumer.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		7D41A9552C99B33C00D19501 /* ConciousConsumerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConciousConsumerApp.swift; sourceTree = "<group>"; };
-		7D41A9572C99B33C00D19501 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		7D41A9552C99B33C00D19501 /* ConsciousConsumerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsciousConsumerApp.swift; sourceTree = "<group>"; };
+		7D41A9572C99B33C00D19501 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		7D41A9592C99B33D00D19501 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7D41A95C2C99B33D00D19501 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		7D41A9632C99B59E00D19501 /* ConsciousConsumerHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsciousConsumerHeaderView.swift; sourceTree = "<group>"; };
+		7D41A9652C99BD9900D19501 /* ConsciousConsumerFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsciousConsumerFooterView.swift; sourceTree = "<group>"; };
+		7DA6AEBC2C9AE104007958C3 /* CustomSecureField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSecureField.swift; sourceTree = "<group>"; };
+		7DA6AEBE2C9AE5B0007958C3 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +59,12 @@
 		7D41A9542C99B33C00D19501 /* ConciousConsumer */ = {
 			isa = PBXGroup;
 			children = (
-				7D41A9552C99B33C00D19501 /* ConciousConsumerApp.swift */,
-				7D41A9572C99B33C00D19501 /* ContentView.swift */,
+				7D41A9632C99B59E00D19501 /* ConsciousConsumerHeaderView.swift */,
+				7D41A9552C99B33C00D19501 /* ConsciousConsumerApp.swift */,
+				7D41A9572C99B33C00D19501 /* AccountView.swift */,
+				7D41A9652C99BD9900D19501 /* ConsciousConsumerFooterView.swift */,
+				7DA6AEBC2C9AE104007958C3 /* CustomSecureField.swift */,
+				7DA6AEBE2C9AE5B0007958C3 /* LoginView.swift */,
 				7D41A9592C99B33D00D19501 /* Assets.xcassets */,
 				7D41A95B2C99B33D00D19501 /* Preview Content */,
 			);
@@ -137,8 +149,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7D41A9582C99B33C00D19501 /* ContentView.swift in Sources */,
-				7D41A9562C99B33C00D19501 /* ConciousConsumerApp.swift in Sources */,
+				7DA6AEBF2C9AE5B0007958C3 /* LoginView.swift in Sources */,
+				7D41A9662C99BD9900D19501 /* ConsciousConsumerFooterView.swift in Sources */,
+				7D41A9582C99B33C00D19501 /* AccountView.swift in Sources */,
+				7DA6AEBD2C9AE104007958C3 /* CustomSecureField.swift in Sources */,
+				7D41A9562C99B33C00D19501 /* ConsciousConsumerApp.swift in Sources */,
+				7D41A9642C99B59E00D19501 /* ConsciousConsumerHeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
