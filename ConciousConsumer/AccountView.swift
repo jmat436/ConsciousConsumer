@@ -5,6 +5,7 @@ struct AccountView: View {
     @State private var password: String = ""
     @State private var emailAddress: String = ""
     @State private var address: String = ""
+    @State private var random: String = ""
     
     var body: some View {
         GeometryReader { geometry in
