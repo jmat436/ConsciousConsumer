@@ -5,36 +5,45 @@ struct LoginView: View {
         ZStack {
             VStack {
                 Image("AppLogo")
+                    .resizable()
+                    .ignoresSafeArea()
+                    .frame(width: 405, height: 325)
+                
+                Spacer()
+                
+                Button(action: {
+                            // Action when button is tapped
+                            print("Button tapped!")
+                        }) {
+                            Text("Sign Up")
+                                .font(.title2)
+                                .foregroundColor(.white)
+                                .padding() // Padding for the text inside the button
+                                .frame(width: 350, height: 150) // Fixed size for the button
+                                .background(
+                                    RoundedRectangle(cornerRadius: 16)
+                                        .fill(Color("WarmOrange")) // Fill color for the button background
+                                )
+                        }
+                         .padding()
+                
+                Spacer()
                 
                 Button(action: {
                             // Action when button is tapped
                             print("Button tapped!")
                         }) {
                             Text("Log In")
-                                .font(.headline)
+                                .font(.title2)
                                 .foregroundColor(.white)
                                 .padding() // Padding for the text inside the button
-                                .frame(width: 300, height: 100) // Fixed size for the button
-                                .background(
-                                    RoundedRectangle(cornerRadius: 16)
-                                        .fill(Color("WarmOrange")) // Fill color for the button background
-                                )
-                        }
-                        .padding()
-                Button(action: {
-                            // Action when button is tapped
-                            print("Button tapped!")
-                        }) {
-                            Text("Sign Up")
-                                .font(.headline)
-                                .foregroundColor(.white)
-                                .padding() // Padding for the text inside the button
-                                .frame(width: 300, height: 100) // Fixed size for the button
+                                .frame(width: 350, height: 150) // Fixed size for the button
                                 .background(
                                     RoundedRectangle(cornerRadius: 16)
                                         .fill(Color("WarmYellow")) // Fill color for the button background
                                 )
                         }
+                        .padding()
             }
         }
     }
