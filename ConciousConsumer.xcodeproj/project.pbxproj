@@ -82,10 +82,10 @@
 				7DA6AECC2C9D6CB9007958C3 /* FeaturedBrandsView.swift */,
 				7DA6AEC62C9C4081007958C3 /* FavoriteBrandsView.swift */,
 				7DA6AECA2C9D66F5007958C3 /* BrandView.swift */,
+				7DA6AEC22C9C37CF007958C3 /* TestView.swift */,
 				7DA6AEBC2C9AE104007958C3 /* CustomSecureField.swift */,
 				7DA6AEC82C9D5C3B007958C3 /* BrandClass.swift */,
 				7D41A9552C99B33C00D19501 /* ConsciousConsumerApp.swift */,
-				7DA6AEC22C9C37CF007958C3 /* TestView.swift */,
 				7D41A9592C99B33D00D19501 /* Assets.xcassets */,
 				7D41A95B2C99B33D00D19501 /* Preview Content */,
 			);

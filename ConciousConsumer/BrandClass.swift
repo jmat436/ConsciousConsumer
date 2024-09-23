@@ -17,6 +17,7 @@ class Brand: Identifiable {
     // Sample data
     static let sampleData: [Brand] = [
         Brand(name: "Vinted", infoSnippet: "Join the community of over 65 million members.", imageName: "VintedBrandImage", isFavorited: true),
-        Brand(name: "Tony's Chocolonely", infoSnippet: "Making chocolate 100% slave-free.", imageName: "TonysBrandImage", isFavorited: true)
+        Brand(name: "Tony's Chocolonely", infoSnippet: "Making chocolate 100% slave-free.", imageName: "TonysBrandImage", isFavorited: true),
+        Brand(name: "Temu", infoSnippet: "Online retailer", imageName: "TemuBrandImage", isFavorited: false)
     ]
 }

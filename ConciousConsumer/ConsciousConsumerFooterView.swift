@@ -1,100 +1,88 @@
 import SwiftUI
 
 struct ConsciousConsumerFooterView: View {
+    // Define closures for each button's action
+    var onHomeTap: () -> Void
+    var onLineTap: () -> Void
+    var onHeartTap: () -> Void
+    var onGearTap: () -> Void
+    
     var body: some View {
         VStack {
-            // Add a black line (divider) just above the symbols
             Divider()
                 .background(Color.black)
                 .frame(height: 3)
-                .padding(.bottom, 5) // Adjust spacing between line and symbols
+                .padding(.bottom, 5)
             
             HStack {
-                // House icon pushed to the far left
-                Image(systemName: "house")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: 30, height: 30)
-                    .padding(.leading)
+                // House button
+                Button(action: onHomeTap) {
+                    Image(systemName: "house")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 30, height: 30)
+                        .padding(.leading)
+                        .foregroundStyle(.black)
+                }
                 
-                Spacer() // Spacer between the house and the next icon
+                Spacer()
                 
-                // Line icon
-                Image(systemName: "line.3.horizontal")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: 30, height: 30)
+                // Line button
+                Button(action: onLineTap) {
+                    Image(systemName: "line.3.horizontal")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 30, height: 30)
+                        .foregroundStyle(.black)
+                }
                 
-                Spacer() // Spacer between the two middle icons
+                Spacer()
                 
-                // Heart icon
-                Image(systemName: "heart.fill")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: 30, height: 30)
+                // Heart button
+                Button(action: onHeartTap) {
+                    Image(systemName: "heart.fill")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 30, height: 30)
+                        .foregroundStyle(.black)
+                }
                 
-                Spacer() // Spacer between the heart and the gear icon
+                Spacer()
                 
-                // Gear icon pushed to the far right
-                Image(systemName: "gear")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: 30, height: 30)
-                    .padding(.trailing)
+                // Gear button
+                Button(action: onGearTap) {
+                    Image(systemName: "gear")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 30, height: 30)
+                        .foregroundStyle(.black)
+                        .padding(.trailing)
+                }
             }
-            .frame(maxWidth: .infinity) // Make the HStack fill the available width
-            .padding(.vertical, 10) // Add some padding around the symbols vertically
+            .frame(maxWidth: .infinity)
+            .padding(.vertical, 10)
         }
-        .frame(maxWidth: .infinity) // Make the whole footer fill the available width
-        .padding(.bottom, 20) // Add extra padding to make the background larger
+        .frame(maxWidth: .infinity)
+        .padding(.bottom, 20)
     }
 }
+
 
 struct ConsciousConsumerFooterView_Previews: PreviewProvider {
     static var previews: some View {
-        ConsciousConsumerFooterView()
-    }
-}
-
-
-
-
-
-/*import SwiftUI
-
-struct ConciousConsumerFooterView: View {
-    var body: some View {
-        HStack {
-            HStack {
-                Image(systemName: "house")
-                    .resizable()
-                    .frame(width: 30, height: 30)
-                    .padding()
-                Image(systemName: "line.3.horizontal")
-                    .resizable()
-                    .frame(width: 30, height: 30)
-                    .padding()
-                Image(systemName: "heart.fill")
-                    .resizable()
-                    .frame(width: 30, height: 30)
-                    .padding()
-                Image(systemName: "gear")
-                    .resizable()
-                    .frame(width: 30, height: 30)
-                    .padding()
+        ConsciousConsumerFooterView(
+            onHomeTap: {
+                print("Home tapped in preview")
+            },
+            onLineTap: {
+                print("Line tapped in preview")
+            },
+            onHeartTap: {
+                print("Heart tapped in preview")
+            },
+            onGearTap: {
+                print("Gear tapped in preview")
             }
-            .background(RoundedRectangle(cornerRadius: 10).stroke(Color.gray, lineWidth: 1))
-            .padding()
-        }
-        .frame(maxWidth: .infinity)
-        .background(Color("LightYellow"))
+        )
     }
 }
-
-
-struct ConciousConsumerFooterView_Previews: PreviewProvider {
-    static var previews: some View {
-        ConciousConsumerFooterView()
-    }
-}
-*/

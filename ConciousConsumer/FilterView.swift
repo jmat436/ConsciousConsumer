@@ -1,59 +1,66 @@
 import SwiftUI
 
 struct FilterView: View {
+    @Binding var currentView: String?
+
     var body: some View {
         GeometryReader { geometry in
             ZStack {
                 RoundedRectangle(cornerRadius: 16.0)
                     .fill(Color(.systemBackground))
                     .frame(width: geometry.size.width, height: geometry.size.height)
-                
+
                 VStack(spacing: 0) {
-                    ConsciousConsumerHeaderView()
-                        .frame(width: geometry.size.width) // Ensure full width
-                        .background(Color("LightYellow")) // Match background color
+                    ConsciousConsumerHeaderView(onPersonTap: {
+                        currentView = "Account"
+                    })
+                        .frame(width: geometry.size.width)
+                        .background(Color("LightYellow"))
                         .padding(.top, 55)
                         .clipped()
-                    
+
                     VStack {
                         Form {
-                            // Center "Filter" text inside the form
                             Text("Filter")
                                 .font(.title)
                                 .bold()
-                                .frame(maxWidth: .infinity, alignment: .center) // Center the text
-                                .listRowSeparator(.hidden) // Hide the separator below the text
-                            
-                            VStack(spacing: 16) { // Add vertical spacing between images
+                                .frame(maxWidth: .infinity, alignment: .center)
+                                .listRowSeparator(.hidden)
+
+                            VStack(spacing: 16) {
                                 Image("HomeFilterBanner")
-                                    .frame(maxWidth: .infinity, alignment: .center) // Center the image
+                                    .frame(maxWidth: .infinity, alignment: .center)
                                     .listRowSeparator(.hidden)
-                                
+
                                 Image("BeautyFilterBanner")
-                                    .frame(maxWidth: .infinity, alignment: .center) // Center the image
+                                    .frame(maxWidth: .infinity, alignment: .center)
                                     .listRowSeparator(.hidden)
-                                
+
                                 Image("ClothingFilterBanner")
-                                    .frame(maxWidth: .infinity, alignment: .center) // Center the image
+                                    .frame(maxWidth: .infinity, alignment: .center)
                                     .listRowSeparator(.hidden)
-                                
+
                                 Image("FoodFilterBanner")
-                                    .frame(maxWidth: .infinity, alignment: .center) // Center the image
+                                    .frame(maxWidth: .infinity, alignment: .center)
                                     .listRowSeparator(.hidden)
                             }
-                            .frame(maxHeight: .infinity, alignment: .center) // Center images vertically
+                            .frame(maxHeight: .infinity, alignment: .center)
                         }
                         .scrollContentBackground(.hidden)
                     }
-                    
+
                     Spacer()
-                    
-                    ConsciousConsumerFooterView()
-                        .frame(width: geometry.size.width) // Ensure full width
-                        .background(Color(.systemBackground)) // Match background color
-                        .clipped() // Ensure clipping to prevent any overflow
+
+                    ConsciousConsumerFooterView(
+                        onHomeTap: { currentView = nil }, // Go to Featured
+                        onLineTap: { currentView = "Line" },
+                        onHeartTap: { currentView = "Favorites" },
+                        onGearTap: { currentView = "Settings" }
+                    )
+                    .frame(width: geometry.size.width)
+                    .background(Color(.systemBackground))
+                    .clipped()
                 }
-                .padding(.trailing)
             }
             .edgesIgnoringSafeArea(.all)
         }
@@ -62,6 +69,6 @@ struct FilterView: View {
 
 struct FilterView_Previews: PreviewProvider {
     static var previews: some View {
-        FilterView()
+        FilterView(currentView: .constant(nil)) // Provide a binding
     }
 }

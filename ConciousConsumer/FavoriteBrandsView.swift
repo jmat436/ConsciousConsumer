@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct FavoriteBrandsView: View {
-    
+    @Binding var currentView: String?
     let favoriteBrands = Brand.sampleData // Using the sample data
 
     var body: some View {
@@ -10,46 +10,48 @@ struct FavoriteBrandsView: View {
                 RoundedRectangle(cornerRadius: 16.0)
                     .fill(Color(.systemBackground))
                     .frame(width: geometry.size.width, height: geometry.size.height)
-                
-                VStack(spacing: 0) { // Remove spacing to ensure no extra space
-                    ConsciousConsumerHeaderView()
-                        .frame(width: geometry.size.width) // Ensure full width
-                        .background(Color("LightYellow")) // Match background color
+
+                VStack(spacing: 0) {
+                    ConsciousConsumerHeaderView(onPersonTap: {
+                        currentView = "Account"
+                    })
+                        .frame(width: geometry.size.width)
+                        .background(Color("LightYellow"))
                         .padding(.top, 55)
-                    
+
                     Spacer()
-                    
+
                     VStack {
                         Text("Favorite Brands")
                             .font(.title)
                             .bold()
                             .padding()
-                        
+
                         ScrollView {
                             VStack {
-                                ForEach(favoriteBrands) { brand in
-                                    BrandView(brand: brand) // Use BrandView for each brand
+                                ForEach(favoriteBrands.filter { $0.isFavorited }) { brand in
+                                    BrandView(brand: brand)
                                         .padding(.horizontal)
                                         .padding(.vertical, 5)
                                 }
                             }
                         }
                     }
-                    
-                    ConsciousConsumerFooterView()
-                        .frame(width: geometry.size.width) // Ensure full width
-                        .background(Color(.systemBackground)) // Match background color
-                        .clipped() // Ensure clipping to prevent any overflow
+
+                    Spacer()
+
+                    ConsciousConsumerFooterView(
+                        onHomeTap: { currentView = nil }, // Go to Featured
+                        onLineTap: { currentView = "Line" },
+                        onHeartTap: { currentView = "Favorites" },
+                        onGearTap: { currentView = "Settings" }
+                    )
+                    .frame(width: geometry.size.width)
+                    .background(Color(.systemBackground))
+                    .clipped()
                 }
             }
             .edgesIgnoringSafeArea(.all)
         }
     }
 }
-
-struct FavoriteBrandsView_Previews: PreviewProvider {
-    static var previews: some View {
-        FavoriteBrandsView()
-    }
-}
-

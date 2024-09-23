@@ -2,15 +2,19 @@ import SwiftUI
 
 struct ConsciousConsumerHeaderView: View {
     @State private var query: String = ""
+    var onPersonTap: () -> Void // Closure for the button action
     
     var body: some View {
         VStack {
             HStack {
-                // "Person" icon outside the search box
-                Image(systemName: "person")
-                    .resizable()
-                    .frame(width: 30, height: 30)
-                    .padding(.trailing, 10)
+                // "Person" icon as a button
+                Button(action: onPersonTap) {
+                    Image(systemName: "person")
+                        .resizable()
+                        .frame(width: 30, height: 30)
+                        .padding(.trailing, 10)
+                        .foregroundStyle(.black)
+                }
                 
                 Spacer(minLength: 90)
                 
@@ -27,13 +31,10 @@ struct ConsciousConsumerHeaderView: View {
                         .foregroundStyle(Color(.black))
                         .multilineTextAlignment(.trailing) // Align text to the right
                         .padding(10)
-                    
                 }
                 .background(RoundedRectangle(cornerRadius: 10).stroke(Color.gray, lineWidth: 1))
-                
                 .frame(height: 40)
             }
-            
             .padding(.horizontal)
             .frame(maxHeight: 57)
             
@@ -44,14 +45,12 @@ struct ConsciousConsumerHeaderView: View {
                 .padding(.top, 0.5) // Adjust spacing between content and line
         }
         .background(Color("LightYellow")) // Use your custom color as the background
-
         .frame(maxWidth: .infinity) // Ensure the header view fills the available width
-
     }
 }
 
 struct ConsciousConsumerHeaderView_Previews: PreviewProvider {
     static var previews: some View {
-        ConsciousConsumerHeaderView()
+        ConsciousConsumerHeaderView(onPersonTap: {})
     }
 }
