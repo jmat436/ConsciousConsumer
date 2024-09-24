@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct ConsciousConsumerFooterView: View {
-    // Define closures for each button's action
+    // closures for each button's action
     var onHomeTap: () -> Void
     var onLineTap: () -> Void
     var onHeartTap: () -> Void

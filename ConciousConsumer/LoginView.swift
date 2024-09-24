@@ -2,7 +2,7 @@ import SwiftUI
 
 struct LoginView: View {
     var onLoginTap: () -> Void
-
+    
     var body: some View {
         ZStack {
             VStack {
@@ -44,5 +44,11 @@ struct LoginView: View {
                 .padding()
             }
         }
+    }
+}
+
+struct LoginView_Previews: PreviewProvider {
+    static var previews: some View {
+        LoginView(onLoginTap: {})
     }
 }

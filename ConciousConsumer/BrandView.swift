@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct BrandView: View {
-    let brand: Brand
+    @ObservedObject var brand: Brand // Use @ObservedObject to observe changes
     
     var body: some View {
         HStack {
@@ -32,6 +32,10 @@ struct BrandView: View {
                 .frame(width: 24, height: 24)
                 .foregroundColor(.red)
                 .padding(.trailing, 10)
+                .onTapGesture {
+                    // Toggle favorite status
+                    brand.isFavorited.toggle()
+                }
         }
         .padding()
         .background(Color("WarmYellow")) // Custom color
@@ -39,20 +43,3 @@ struct BrandView: View {
         .shadow(radius: 5)
     }
 }
-
-struct BrandView_Previews: PreviewProvider {
-    static var previews: some View {
-        // Sample Brand data
-        let sampleBrand = Brand(
-            name: "Sample Brand",
-            infoSnippet: "This is a sample brand description.",
-            imageName: "TemuBrandImage", // Make sure to have an image named "sample_image" in your assets
-            isFavorited: true
-        )
-        
-        BrandView(brand: sampleBrand)
-            .previewLayout(.sizeThatFits) // Optional: fits the preview to the content size
-            .padding() // Optional: add padding for the preview
-    }
-}
-

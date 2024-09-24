@@ -17,7 +17,6 @@ struct AccountView: View {
                     
                     VStack(spacing: 0) {
                         ConsciousConsumerHeaderView(onPersonTap: {
-                            // Handle navigation to AccountView
                             currentView = "Account"
                         })
                         .frame(width: geometry.size.width)

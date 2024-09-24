@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D051C1D2CA1D46D0099A622 /* BrandDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D051C1C2CA1D46D0099A622 /* BrandDetailView.swift */; };
 		7D41A9562C99B33C00D19501 /* ConsciousConsumerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D41A9552C99B33C00D19501 /* ConsciousConsumerApp.swift */; };
 		7D41A9582C99B33C00D19501 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D41A9572C99B33C00D19501 /* AccountView.swift */; };
 		7D41A95A2C99B33D00D19501 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D41A9592C99B33D00D19501 /* Assets.xcassets */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7D051C1C2CA1D46D0099A622 /* BrandDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandDetailView.swift; sourceTree = "<group>"; };
 		7D41A9522C99B33C00D19501 /* ConciousConsumer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConciousConsumer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D41A9552C99B33C00D19501 /* ConsciousConsumerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsciousConsumerApp.swift; sourceTree = "<group>"; };
 		7D41A9572C99B33C00D19501 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 			children = (
 				7D41A9632C99B59E00D19501 /* ConsciousConsumerHeaderView.swift */,
 				7D41A9652C99BD9900D19501 /* ConsciousConsumerFooterView.swift */,
+				7D051C1C2CA1D46D0099A622 /* BrandDetailView.swift */,
 				7DA6AEBE2C9AE5B0007958C3 /* LoginView.swift */,
 				7D41A9572C99B33C00D19501 /* AccountView.swift */,
 				7DA6AEC02C9C2588007958C3 /* SettingsView.swift */,
@@ -173,6 +176,7 @@
 				7DA6AEC72C9C4081007958C3 /* FavoriteBrandsView.swift in Sources */,
 				7DA6AEC12C9C2588007958C3 /* SettingsView.swift in Sources */,
 				7DA6AEBF2C9AE5B0007958C3 /* LoginView.swift in Sources */,
+				7D051C1D2CA1D46D0099A622 /* BrandDetailView.swift in Sources */,
 				7D41A9662C99BD9900D19501 /* ConsciousConsumerFooterView.swift in Sources */,
 				7DA6AECB2C9D66F5007958C3 /* BrandView.swift in Sources */,
 				7D41A9582C99B33C00D19501 /* AccountView.swift in Sources */,
