@@ -11,6 +11,16 @@ struct FeaturedBrandsView: View {
                     RoundedRectangle(cornerRadius: 16.0)
                         .fill(Color(.systemBackground))
                         .frame(width: geometry.size.width, height: geometry.size.height)
+                    
+                    Circle()
+                        .fill(Color("LightYellow"))
+                        .frame(width: 300, height: 300)
+                        .offset(x: -200, y: -140)
+                    
+                    Circle()
+                        .fill(Color("LightYellow"))
+                        .frame(width: 300, height: 300)
+                        .offset(x: 200, y: 180)
 
                     VStack(spacing: 0) {
                         ConsciousConsumerHeaderView(onPersonTap: {
@@ -18,7 +28,8 @@ struct FeaturedBrandsView: View {
                         })
                         .frame(width: geometry.size.width)
                         .background(Color("LightYellow"))
-                        .padding(.top, 55)
+                        .padding(.top)
+                        .clipped()
 
                         Spacer()
 
@@ -49,6 +60,7 @@ struct FeaturedBrandsView: View {
                         ConsciousConsumerFooterView(
                             onHomeTap: { currentView = nil },
                             onLineTap: { currentView = "Line" },
+                            onCameraTap: { currentView = "Camera" }, 
                             onHeartTap: { currentView = "Favorites" },
                             onGearTap: { currentView = "Settings" }
                         )

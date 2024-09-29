@@ -20,7 +20,9 @@ struct AccountView: View {
                             currentView = "Account"
                         })
                         .frame(width: geometry.size.width)
-                        .padding(.top, 55)
+                        .background(Color("LightYellow"))
+                        .padding(.top)
+                        .clipped()
 
                         Spacer()
 
@@ -72,12 +74,16 @@ struct AccountView: View {
                             onLineTap: {
                                 currentView = "Line"
                             },
+                            onCameraTap: {
+                                currentView = "Camera"
+                            },
                             onHeartTap: {
                                 currentView = "Favorites"
                             },
                             onGearTap: {
                                 currentView = "Settings"
                             }
+
                         )
                             .frame(width: geometry.size.width)
                             .background(Color(.systemBackground))

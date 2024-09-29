@@ -23,6 +23,7 @@
 		7DA6AEC92C9D5C3C007958C3 /* BrandClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA6AEC82C9D5C3B007958C3 /* BrandClass.swift */; };
 		7DA6AECB2C9D66F5007958C3 /* BrandView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA6AECA2C9D66F5007958C3 /* BrandView.swift */; };
 		7DA6AECD2C9D6CB9007958C3 /* FeaturedBrandsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA6AECC2C9D6CB9007958C3 /* FeaturedBrandsView.swift */; };
+		CE91D8FF2CA42A16002527C9 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE91D8FE2CA42A16002527C9 /* CameraView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		7DA6AEC82C9D5C3B007958C3 /* BrandClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandClass.swift; sourceTree = "<group>"; };
 		7DA6AECA2C9D66F5007958C3 /* BrandView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandView.swift; sourceTree = "<group>"; };
 		7DA6AECC2C9D6CB9007958C3 /* FeaturedBrandsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedBrandsView.swift; sourceTree = "<group>"; };
+		CE91D8FE2CA42A16002527C9 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 				7DA6AEBC2C9AE104007958C3 /* CustomSecureField.swift */,
 				7DA6AEC82C9D5C3B007958C3 /* BrandClass.swift */,
 				7D41A9552C99B33C00D19501 /* ConsciousConsumerApp.swift */,
+				CE91D8FE2CA42A16002527C9 /* CameraView.swift */,
 				7D41A9592C99B33D00D19501 /* Assets.xcassets */,
 				7D41A95B2C99B33D00D19501 /* Preview Content */,
 			);
@@ -176,6 +179,7 @@
 				7DA6AEC72C9C4081007958C3 /* FavoriteBrandsView.swift in Sources */,
 				7DA6AEC12C9C2588007958C3 /* SettingsView.swift in Sources */,
 				7DA6AEBF2C9AE5B0007958C3 /* LoginView.swift in Sources */,
+				CE91D8FF2CA42A16002527C9 /* CameraView.swift in Sources */,
 				7D051C1D2CA1D46D0099A622 /* BrandDetailView.swift in Sources */,
 				7D41A9662C99BD9900D19501 /* ConsciousConsumerFooterView.swift in Sources */,
 				7DA6AECB2C9D66F5007958C3 /* BrandView.swift in Sources */,
@@ -320,6 +324,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ConciousConsumer/Preview Content\"";
+				DEVELOPMENT_TEAM = 7HXUVL8LVC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -327,12 +332,13 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = University.ConciousConsumer;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jamie.fontys.ConciousConsumer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -348,6 +354,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ConciousConsumer/Preview Content\"";
+				DEVELOPMENT_TEAM = 7HXUVL8LVC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -355,12 +362,13 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = University.ConciousConsumer;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jamie.fontys.ConciousConsumer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

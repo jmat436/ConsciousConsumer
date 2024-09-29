@@ -6,10 +6,10 @@ struct LoginView: View {
     var body: some View {
         ZStack {
             VStack {
-                Image("AppLogo")
+                Image("NewLogo2")
                     .resizable()
                     .ignoresSafeArea()
-                    .frame(width: 405, height: 325)
+                    .frame(width: 380, height: 300)
 
                 Spacer()
 
@@ -23,7 +23,7 @@ struct LoginView: View {
                         .frame(width: 350, height: 150)
                         .background(
                             RoundedRectangle(cornerRadius: 16)
-                                .fill(Color("WarmOrange"))
+                                .fill(Color("DarkGreen"))
                         )
                 }
                 .padding()
@@ -38,7 +38,7 @@ struct LoginView: View {
                         .frame(width: 350, height: 150)
                         .background(
                             RoundedRectangle(cornerRadius: 16)
-                                .fill(Color("WarmYellow"))
+                                .fill(Color("LightGreen"))
                         )
                 }
                 .padding()

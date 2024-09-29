@@ -8,6 +8,7 @@ struct ConciousConsumerApp: App {
         WindowGroup {
             NavigationStack {
                 ContentView(currentView: $currentView)
+                    .statusBarHidden()
             }
         }
     }
@@ -27,7 +28,11 @@ struct ContentView: View {
                 AccountView(currentView: $currentView)
             } else if currentView == "Favorites" {
                 FavoriteBrandsView(currentView: $currentView)
-            } else if currentView == "Line" {
+            } 
+            else if currentView == "Camera" {
+                CameraView(currentView: $currentView)
+           }
+            else if currentView == "Line" {
                 FilterView(currentView: $currentView)
             } else if currentView == "Settings" {
                 SettingsView(currentView: $currentView)

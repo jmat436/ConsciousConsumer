@@ -12,22 +12,21 @@ struct ConsciousConsumerHeaderView: View {
                     Image(systemName: "person")
                         .resizable()
                         .frame(width: 30, height: 30)
-                        .padding(.trailing, 10)
+                        .padding(.trailing, 234)
                         .foregroundStyle(.black)
                 }
                 
-                Spacer(minLength: 90)
                 
                 HStack {
                     // Magnifying glass on the far left
                     Image(systemName: "magnifyingglass")
                         .foregroundColor(.black)
-                        .padding(.leading, 10)
+                        .padding(.leading, 33)
                     
                     Spacer() // Spacer between the magnifying glass and the text field
 
                     // TextField aligned to the far right of the search box
-                    TextField("Search...", text: $query)
+                    TextField("", text: $query)
                         .foregroundStyle(Color(.black))
                         .multilineTextAlignment(.trailing) // Align text to the right
                         .padding(10)

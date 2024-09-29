@@ -16,7 +16,7 @@ struct FilterView: View {
                     })
                         .frame(width: geometry.size.width)
                         .background(Color("LightYellow"))
-                        .padding(.top, 55)
+                        .padding(.top)
                         .clipped()
 
                     VStack {
@@ -54,6 +54,7 @@ struct FilterView: View {
                     ConsciousConsumerFooterView(
                         onHomeTap: { currentView = nil }, // Go to Featured
                         onLineTap: { currentView = "Line" },
+                        onCameraTap: {currentView = "Camera" },
                         onHeartTap: { currentView = "Favorites" },
                         onGearTap: { currentView = "Settings" }
                     )

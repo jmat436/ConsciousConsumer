@@ -4,6 +4,7 @@ struct ConsciousConsumerFooterView: View {
     // closures for each button's action
     var onHomeTap: () -> Void
     var onLineTap: () -> Void
+    var onCameraTap: () -> Void
     var onHeartTap: () -> Void
     var onGearTap: () -> Void
     
@@ -34,6 +35,17 @@ struct ConsciousConsumerFooterView: View {
                         .aspectRatio(contentMode: .fit)
                         .frame(width: 30, height: 30)
                         .foregroundStyle(.black)
+                }
+                
+                Spacer()
+                
+                // Camera button
+                Button(action: onCameraTap) {
+                    Image(systemName: "camera")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 30, height: 30)
+                        .foregroundColor(.black)
                 }
                 
                 Spacer()
@@ -77,11 +89,14 @@ struct ConsciousConsumerFooterView_Previews: PreviewProvider {
             onLineTap: {
                 print("Line tapped in preview")
             },
-            onHeartTap: {
-                print("Heart tapped in preview")
+            onCameraTap: {
+                print("Camera tapped in preview")
+                
+            }, onHeartTap: {
+                print("Line tapped in preview")
             },
             onGearTap: {
-                print("Gear tapped in preview")
+                print("Heart tapped in preview")
             }
         )
     }
